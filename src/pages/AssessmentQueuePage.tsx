@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
 import { Clock, Check, User, Calendar, Cpu, Briefcase } from 'lucide-react';
 import { ideaService } from '../services/ideaService';
 import { Idea, ScoreLevel } from '../data/ideas';
@@ -8,7 +7,6 @@ import { useToast } from '../components/Toast';
 import './AssessmentQueuePage.css';
 
 export function AssessmentQueuePage() {
-    const navigate = useNavigate();
     const { showToast } = useToast();
     const [pendingIdeas, setPendingIdeas] = useState<Idea[]>([]);
     const [loading, setLoading] = useState(true);
